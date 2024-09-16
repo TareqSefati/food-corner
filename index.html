@@ -22,7 +22,35 @@
 			<nav>
 				<div class="navbar bg-base-100">
 					<div class="navbar-start">
-						<div class="dropdown">
+						<img
+							src="Resources/Logo/logo2.jpg"
+							alt="Logo"
+							class="size-20"
+						/>
+						<a class="font-extrabold text-xl ml-1" href=""
+							>Food Corner</a
+						>
+					</div>
+					<div class="navbar-center hidden lg:flex">
+						<ul class="menu menu-horizontal px-1">
+							<li>
+								<button onclick="getData(event)">Potato</button>
+							</li>
+							<li>
+								<button onclick="getData(event)">Soup</button>
+							</li>
+							<li>
+								<button onclick="getData(event)">
+									Chicken
+								</button>
+							</li>
+							<li>
+								<button onclick="getData(event)">Beef</button>
+							</li>
+						</ul>
+					</div>
+					<div class="navbar-end">
+						<div class="dropdown dropdown-end">
 							<div
 								tabindex="0"
 								role="button"
@@ -47,30 +75,13 @@
 								tabindex="0"
 								class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
 							>
-								<li><a>Potato</a></li>
-								<li><a>Soup</a></li>
-								<li><a>Chicken</a></li>
-								<li><a>Beef</a></li>
+								<li><a onclick="getData(event)">Potato</a></li>
+								<li><a onclick="getData(event)">Soup</a></li>
+								<li><a onclick="getData(event)">Chicken</a></li>
+								<li><a onclick="getData(event)">Beef</a></li>
 							</ul>
 						</div>
-						<img
-							src="Resources/Logo/logo2.jpg"
-							alt="Logo"
-							class="size-20"
-						/>
-						<a class="font-extrabold text-xl ml-1">Food Corner</a>
 					</div>
-					<div class="navbar-center hidden lg:flex">
-						<ul class="menu menu-horizontal px-1">
-							<li><a>Potato</a></li>
-							<li><a>Soup</a></li>
-							<li><a>Chicken</a></li>
-							<li><a>Beef</a></li>
-						</ul>
-					</div>
-					<!-- <div class="navbar-end">
-						<a class="btn">Button</a>
-					</div> -->
 				</div>
 			</nav>
 			<!-- Navbar end  -->
@@ -90,7 +101,9 @@
 								class="hero-content text-neutral-content text-center"
 							>
 								<div class="max-w-md">
-									<h1 class="mb-5 text-4xl lg:text-5xl font-semibold">
+									<h1
+										class="mb-5 text-3xl md:text-4xl lg:text-5xl font-semibold"
+									>
 										Potato Gratin with Chicken
 									</h1>
 									<p class="text-white hidden md:block">
@@ -121,7 +134,9 @@
 								class="hero-content text-neutral-content text-center"
 							>
 								<div class="max-w-md">
-									<h1 class="mb-5 text-4xl lg:text-5xl font-semibold">
+									<h1
+										class="mb-5 text-3xl md:text-4xl lg:text-5xl font-semibold"
+									>
 										Beetroot Soup (Borscht)
 									</h1>
 									<p class="text-white hidden md:block">
@@ -152,7 +167,9 @@
 								class="hero-content text-neutral-content text-center"
 							>
 								<div class="max-w-md">
-									<h1 class="mb-5 text-4xl lg:text-5xl font-semibold">
+									<h1
+										class="mb-5 text-3xl md:text-4xl lg:text-5xl font-semibold"
+									>
 										Kentucky Fried Chicken
 									</h1>
 									<p class="text-white hidden md:block">
@@ -184,7 +201,9 @@
 								class="hero-content text-neutral-content text-center"
 							>
 								<div class="max-w-md">
-									<h1 class="mb-5 text-4xl lg:text-5xl font-semibold">
+									<h1
+										class="mb-5 text-3xl md:text-4xl lg:text-5xl font-semibold"
+									>
 										Beef Bourguignon
 									</h1>
 									<p class="text-white hidden md:block">
@@ -208,6 +227,21 @@
 			</section>
 			<!-- carousel end  -->
 		</header>
+
+		<main class="container w-10/12 mx-auto mt-10">
+			<section>
+				<div class="mb-5">
+					<h1 id="category-name" class="text-center text-5xl mb-5">
+						Category - All
+					</h1>
+					<hr class="w-3/4 mx-auto" />
+				</div>
+				<div
+					id="data-container"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+				></div>
+			</section>
+		</main>
 
 		<script src="js/script.js"></script>
 	</body>
