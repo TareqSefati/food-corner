@@ -32,20 +32,42 @@
 						>
 					</div>
 					<div class="navbar-center hidden lg:flex">
-						<ul class="menu menu-horizontal px-1">
+						<ul id="buttonList" class="menu-horizontal gap-2">
 							<li>
-								<button onclick="getData(event)">Potato</button>
+								<button
+									class="p-1 rounded-md bg-sky-950 text-white w-20 hover:bg-sky-900 hover:text-white"
+									style="border: black solid 1px"
+									onclick="getData(event)"
+								>
+									Potato
+								</button>
 							</li>
 							<li>
-								<button onclick="getData(event)">Soup</button>
+								<button
+									class="p-1 rounded-md w-20 hover:bg-sky-900 hover:text-white"
+									style="border: black solid 1px"
+									onclick="getData(event)"
+								>
+									Soup
+								</button>
 							</li>
 							<li>
-								<button onclick="getData(event)">
+								<button
+									class="p-1 rounded-md w-20 hover:bg-sky-900 hover:text-white"
+									style="border: black solid 1px"
+									onclick="getData(event)"
+								>
 									Chicken
 								</button>
 							</li>
 							<li>
-								<button onclick="getData(event)">Beef</button>
+								<button
+									class="p-1 rounded-md w-20 hover:bg-sky-900 hover:text-white"
+									style="border: black solid 1px"
+									onclick="getData(event)"
+								>
+									Beef
+								</button>
 							</li>
 						</ul>
 					</div>
@@ -229,6 +251,7 @@
 		</header>
 
 		<main class="container w-10/12 mx-auto mt-10">
+			<!-- API data load section start -->
 			<section>
 				<div class="mb-5">
 					<h1 id="category-name" class="text-center text-5xl mb-5">
@@ -238,9 +261,94 @@
 				</div>
 				<div
 					id="data-container"
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
 				></div>
 			</section>
+			<!-- API data load section end -->
+
+			<!-- FAQ section start  -->
+			<section>
+				<div class="mb-5 mt-20">
+					<h1 id="category-name" class="text-center text-5xl mb-5">
+						Frequently Asked Questions - FAQ
+					</h1>
+					<hr class="w-3/4 mx-auto" />
+				</div>
+
+				<div>
+					<div class="collapse collapse-plus bg-base-200 mb-4">
+						<input
+							type="radio"
+							name="my-accordion-3"
+							checked="checked"
+						/>
+						<div class="collapse-title text-xl font-medium">
+							Tell me the address of your shop? Is home delivery
+							system available?
+						</div>
+						<div class="collapse-content">
+							<p>
+								Our address is House#32/D/E; Road#3; Sector#3;
+								Uttara NatoreTower(14thFloor): Dhaka
+								Bangladesh1230 <br />
+								Please visit us. <br />
+								Yes home delivery is available.
+							</p>
+						</div>
+					</div>
+					<div class="collapse collapse-plus bg-base-200 mb-4">
+						<input type="radio" name="my-accordion-3" />
+						<div class="collapse-title text-xl font-medium">
+							Is your product authentic?
+						</div>
+						<div class="collapse-content">
+							<p>
+								Yes. All Our Products are completely authentic.
+							</p>
+						</div>
+					</div>
+					<div class="collapse collapse-plus bg-base-200 mb-4">
+						<input type="radio" name="my-accordion-3" />
+						<div class="collapse-title text-xl font-medium">
+							Do I receive an invoice for my order?
+						</div>
+						<div class="collapse-content">
+							<p>
+								Yes you will get an invoice with your ordered
+								product.
+							</p>
+						</div>
+					</div>
+					<div class="collapse collapse-plus bg-base-200 mb-4">
+						<input type="radio" name="my-accordion-3" />
+						<div class="collapse-title text-xl font-medium">
+							Which payment methods are accepted in the Online
+							Shop?
+						</div>
+						<div class="collapse-content">
+							<p>
+								We accept cash on delivery and we also have
+								Online Credit Card and Online BKash, Nagad and
+								others online payment service.
+							</p>
+						</div>
+					</div>
+					<div class="collapse collapse-plus bg-base-200 mb-4">
+						<input type="radio" name="my-accordion-3" />
+						<div class="collapse-title text-xl font-medium">
+							What are the delivery charges for orders from the
+							Online Shop?
+						</div>
+						<div class="collapse-content">
+							<p>
+								The delivery charges for orders from Online Shop
+								is TK 100.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- FAQ section end  -->
 		</main>
 
 		<script src="js/script.js"></script>

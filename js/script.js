@@ -1,13 +1,14 @@
-function getAllFood() {
-    let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+function getDefaultFood() {
+    let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=Potato`;
     fetch(url)
         .then(res => res.json())
-        .then(data => viewMeal(data.meals, ""))
+        .then(data => viewMeal(data.meals, "Potato"))
         .catch(err => console.log('Error', err));
 }
-getAllFood();
+getDefaultFood();
 
 function getData(event) {
+    changeButtonColor(event);
     console.log(event.target.textContent)
     let foodName = event.target.textContent;
     let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
@@ -18,6 +19,19 @@ function getData(event) {
         
 }
 
+function changeButtonColor(event){
+    const list = document.getElementById("buttonList");
+    // Check if the clicked element is a button
+    if (event.target.tagName === "BUTTON") {
+        // Remove the "selected" class from all buttons
+        const buttons = list.querySelectorAll("button");
+        buttons.forEach(function(button) {
+            button.classList.remove("bg-sky-950", "text-white");
+            
+        });
+        event.target.classList.add("bg-sky-950", "text-white");
+    }
+}
 
 const viewMeal = (meals, foodName) => {
     let categoryNameNode = document.getElementById("category-name");
