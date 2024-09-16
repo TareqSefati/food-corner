@@ -59,10 +59,54 @@ const viewMeal = (meals, foodName) => {
                     ${meal.strInstructions.slice(0, 150)}...
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn glass btn-outline hover:bg-sky-950">Show More</button>
+                    <button onclick="viewDetails(${meal.idMeal})" class="btn glass btn-outline hover:bg-sky-950">Show More</button>
                 </div>
             </div>
         `;
 		container.appendChild(card);
     });
+}
+
+function getDataById(id){
+    let url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+    let data = fetch(url)
+        .then(res => res.json())
+        .then(data =>  data.meals[0])
+        .catch(error => console.log('Error: ', error));
+    return data;
+}
+
+async function viewDetails(id){
+    let data = await getDataById(id);
+    console.log(data);
+    const container = document.getElementById("details-container");
+    container.innerHTML = `
+        <div class="card lg:card-side bg-base-100">
+            <figure >
+                <img class="w-10/12 rounded-2xl"
+                src="${data.strMealThumb}" alt="${data.strMeal} - image"/>
+            </figure>
+            <div class="card-body">
+                <div class="lg:w-80 md:w-full sm:w-full">
+                    <h2 class="card-title mb-1">${data.strMeal}</h2>
+                    <p> <span class="font-semibold">Food Category:</span> ${data.strCategory}</p>
+                    <p class="text-xs"><span class="font-semibold">Description:</span> ${data.strInstructions}</p>
+                    <p class="text-semibold pt-4 hover:cursor-pointer">
+                        More Details: 
+                        <span class="text-blue-600">
+                            <a href="${data.strSource}" target="_blank">${data.strSource} </a> 
+                        </span>
+                    </p>
+                    <p class="text-semibold pt-4 hover:cursor-pointer"> 
+                        <i class="fa-brands fa-youtube"></i> 
+                        Watch Video: 
+                        <span class="text-blue-600">
+                            <a href="${data.strYoutube}" target="_blank">${data.strYoutube} </a> 
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
+    modal_show_details.showModal();
 }

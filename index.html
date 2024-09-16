@@ -15,6 +15,7 @@
 			src="https://kit.fontawesome.com/9e8306aeda.js"
 			crossorigin="anonymous"
 		></script>
+        <script src="https://kit.fontawesome.com/5f092a7ab8.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header class="w-10/12 mx-auto">
@@ -266,6 +267,26 @@
 			</section>
 			<!-- API data load section end -->
 
+			<!-- Modal section start  -->
+			<dialog id="modal_show_details" class="modal modal-bottom sm:modal-middle">
+				<div class="modal-box w-11/12 max-w-5xl">
+					<!-- <h3 class="text-lg font-bold">Hello!</h3>
+					<p class="py-4">
+						Press ESC key or click the button below to close
+					</p> -->
+                    <div id="details-container">
+                        
+                    </div>
+					<div class="modal-action">
+						<form method="dialog">
+							<!-- if there is a button in form, it will close the modal -->
+							<button class="btn">Close</button>
+						</form>
+					</div>
+				</div>
+			</dialog>
+			<!-- Modal section end  -->
+
 			<!-- User review section start  -->
 			<section>
 				<div class="mb-5 mt-20">
@@ -454,13 +475,13 @@
 							checked="checked"
 						/>
 						<div class="collapse-title text-xl font-medium">
-							Q. Tell me the address of your shop? Is home delivery
-							system available?
+							Q. Tell me the address of your shop? Is home
+							delivery system available?
 						</div>
 						<div class="collapse-content">
 							<p>
-								Ans: Our address is House#32/D/E; Road#3; Sector#3;
-								Uttara NatoreTower(14thFloor): Dhaka
+								Ans: Our address is House#32/D/E; Road#3;
+								Sector#3; Uttara NatoreTower(14thFloor): Dhaka
 								Bangladesh1230 <br />
 								Please visit us. <br />
 								Yes home delivery is available.
@@ -474,7 +495,8 @@
 						</div>
 						<div class="collapse-content">
 							<p>
-								Ans: Yes. All Our Products are completely authentic.
+								Ans: Yes. All Our Products are completely
+								authentic.
 							</p>
 						</div>
 					</div>
@@ -485,8 +507,8 @@
 						</div>
 						<div class="collapse-content">
 							<p>
-								Ans: Yes you will get an invoice with your ordered
-								product.
+								Ans: Yes you will get an invoice with your
+								ordered product.
 							</p>
 						</div>
 					</div>
@@ -512,8 +534,8 @@
 						</div>
 						<div class="collapse-content">
 							<p>
-								Ans: The delivery charges for orders from Online Shop
-								is TK 100.
+								Ans: The delivery charges for orders from Online
+								Shop is TK 100.
 							</p>
 						</div>
 					</div>
